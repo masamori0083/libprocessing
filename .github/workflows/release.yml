@@ -52,7 +52,7 @@ jobs:
           args: --release --out dist --find-interpreter
           manylinux: 2_28
           before-script-linux: |
-            apt-fast install -y cmake gcc-c++ \
+            yum install -y cmake gcc-c++ \
               libX11-devel libXrandr-devel libXinerama-devel libXcursor-devel libXi-devel \
               wayland-devel libxkbcommon-devel
           working-directory: crates/processing_pyo3
