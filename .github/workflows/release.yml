@@ -48,6 +48,7 @@ jobs:
       - name: Build wheels
         uses: PyO3/maturin-action@v1
         with:
+          container: "quay.io/pypa/manylinux_2_34_${{matrix.target}}:latest"
           docker-options: "-e PKG_CONFIG_PATH=/usr/lib64/pkgconfig:/usr/lib/${{matrix.target}}-linux-gnu/pkgconfig:/usr/local/lib/pkgconfig"
           target: ${{ matrix.target }}
           args: --release --out dist --find-interpreter
