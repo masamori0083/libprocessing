@@ -4,6 +4,29 @@ libprocessing is an experimental native library with the goal of supporting the 
 
 ## Getting started
 
+### mewnala (the python library)
+
+Inside of our `processing_pyo3` crate we have created a python package that you can easily install with pip.
+Again, we are still very nascent, but let us know what kinds of snags you may run into while getting this set up.
+Try running the examples in the [processing_pyo3 examples directory](crates/processing_pyo3/examples).
+
+```bash
+# have python3 installed on your system
+
+# create a sketch folder and go inside
+mkdir my-sketch-folder && cd my-sketch-folder
+
+# create a virtual env
+python -m venv .venv
+
+# activate virtual env
+source .venv/bin/activate
+
+pip install mewnala
+
+python my_sketch.py
+```
+
 ### Rust
 
 You'll need to install the Rust toolchain to work on this project. Most users will want to install Rust via [`rustup`](https://rustup.rs/), which helps manage Rust toolchain versions.
